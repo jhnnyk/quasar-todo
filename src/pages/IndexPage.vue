@@ -14,22 +14,13 @@
           </template>
         </q-input>
       </q-toolbar>
-      <q-list bordered>
-        <q-item>
-          <q-item-section side>
-            <q-checkbox :model-value="true" />
-          </q-item-section>
-          <q-item-section> Go shopping </q-item-section>
-          <q-item-section side>
-            <q-btn icon="mdi-delete" size="sm" flat round />
-          </q-item-section>
-        </q-item>
-      </q-list>
+
+      <TodosList bordered />
     </q-card>
 
     <div class="col-xs-3">
       <q-toolbar class="bg-primary">
-        <q-btn
+        <CreateTodoButton
           icon="mdi-plus"
           color="secondary"
           class="q-ml-lg"
@@ -43,6 +34,8 @@
 
 <script setup>
 import { ref } from 'vue'
+import CreateTodoButton from 'components/CreateTodoButton.vue'
+import TodosList from 'components/TodosList.vue'
 
 const search = ref('')
 </script>
